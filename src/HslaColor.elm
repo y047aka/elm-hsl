@@ -1,4 +1,4 @@
-module Hsl exposing
+module HslaColor exposing
     ( HslaColor
     , hsl, hsla, hsl360, rgb255, rgb, rgba
     , fromRgba, fromHsla

@@ -5,7 +5,7 @@ This package is the HSL version of [elm-color](https://package.elm-lang.org/pack
 ## Example
 
 ```elm
-import Hsl exposing (HslaColor)
+import HslaColor exposing (HslaColor)
 import Html exposing (Html)
 import Html.Attributes exposing (style)
 
@@ -13,15 +13,15 @@ view : HslaColor -> Html msg
 view foreground =
     let
         hue =
-            (Hsl.toHsla foreground).hue
+            (HslaColor.toHsla foreground).hue
 
         borderColor =
-            Hsl.hsla hue 0.75 0.5 0.8
+            HslaColor.hsla hue 0.75 0.5 0.8
     in
     Html.div
-        [ style "background-color" (Hsl.toCssString Hsl.lightOrange)
-        , style "color" (Hsl.toCssString foreground)
-        , style "border-color" (Hsl.toCssString borderColor)
+        [ style "background-color" (HslaColor.toCssString HslaColor.lightOrange)
+        , style "color" (HslaColor.toCssString foreground)
+        , style "border-color" (HslaColor.toCssString borderColor)
         ]
         [ Html.text "(ᵔᴥᵔ)" ]
 ```
