@@ -1,0 +1,17 @@
+{
+    "type": "package",
+    "name": "y047aka/elm-hsl-color",
+    "summary": "The HSL version of elm-color",
+    "license": "MIT",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "Hsl"
+    ],
+    "elm-version": "0.19.1 <= v < 0.20.0",
+    "dependencies": {
+        "avh4/elm-color": "1.0.0 <= v < 2.0.0",
+        "elm/core": "1.0.4 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0"
+    },
+    "test-dependencies": {}
+}
