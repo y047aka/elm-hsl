@@ -3,7 +3,7 @@
     "name": "y047aka/elm-hsl-color",
     "summary": "The HSL version of elm-color",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exposed-modules": [
         "HslaColor",
         "HslaColor.Manipulate"
