@@ -4,6 +4,8 @@ module HslaColor exposing
     , fromRgba, fromHsla
     , toCssString
     , toRgba, toHsla, toColor
+    , red, yellow, lime, cyan, blue, magenta
+    , white, gray, black
     )
 
 {-| This package defines a standard `Hsla` type.
@@ -35,6 +37,16 @@ module HslaColor exposing
 # Extracing values from `Hsla` type
 
 @docs toRgba, toHsla, toColor
+
+
+# Seed colors
+
+@docs red, yellow, lime, cyan, blue, magenta
+
+
+# white, gray, black
+
+@docs white, gray, black
 
 -}
 
@@ -213,8 +225,8 @@ If you want to be more concise, see [`rgba`](#rgba) or [`rgb`](#rgb).
 
 -}
 fromRgba : { red : Float, green : Float, blue : Float, alpha : Float } -> HslaColor
-fromRgba { red, green, blue, alpha } =
-    rgba red green blue alpha
+fromRgba c =
+    rgba c.red c.green c.blue c.alpha
 
 
 {-| Converts a `Hsla` type to a string suitable for use in CSS.
@@ -318,3 +330,55 @@ toColor (HslaSpace h s l a) =
         , lightness = l
         , alpha = a
         }
+
+
+{-| -}
+red : HslaColor
+red =
+    hsl360 0 100 50
+
+
+{-| -}
+yellow : HslaColor
+yellow =
+    hsl360 60 100 50
+
+
+{-| -}
+lime : HslaColor
+lime =
+    hsl360 120 100 50
+
+
+{-| -}
+cyan : HslaColor
+cyan =
+    hsl360 180 100 50
+
+
+{-| -}
+blue : HslaColor
+blue =
+    hsl360 240 100 50
+
+
+{-| -}
+magenta : HslaColor
+magenta =
+    hsl360 300 100 50
+
+
+{-| -}
+white : HslaColor
+white =
+    hsl360 0 0 100
+
+
+gray : HslaColor
+gray =
+    hsl360 0 0 50
+
+
+black : HslaColor
+black =
+    hsl360 0 0 0
