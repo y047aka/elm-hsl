@@ -374,11 +374,13 @@ white =
     hsl360 0 0 100
 
 
+{-| -}
 gray : HslaColor
 gray =
     hsl360 0 0 50
 
 
+{-| -}
 black : HslaColor
 black =
     hsl360 0 0 0
