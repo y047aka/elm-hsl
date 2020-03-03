@@ -25,7 +25,7 @@ rotateHue angle cl =
         { hue, saturation, lightness, alpha } =
             toHsla cl
     in
-    hsla (hue + degrees angle) saturation lightness alpha
+    hsla (hue + (angle / 360)) saturation lightness alpha
 
 
 {-| Increase the saturation of a color
