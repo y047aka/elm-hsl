@@ -192,7 +192,7 @@ If you want to provide RGB values as `Float` values between 0.0 and 1.0, see [`r
 -}
 rgb255 : Int -> Int -> Int -> HslaColor
 rgb255 r g b =
-    HslaSpace (scaleFrom255 r) (scaleFrom255 g) (scaleFrom255 b) 1.0
+    rgba (scaleFrom255 r) (scaleFrom255 g) (scaleFrom255 b) 1.0
 
 
 scaleFrom255 : Int -> Float
